@@ -1,184 +1,1396 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#101010">
-<meta name="description" content="Estúdio de Beleza Liliane Feliciano — beleza, cuidado e sofisticação.">
-<title>Liliane Feliciano — Estúdio de Beleza</title>
-<style>
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
-:root{--black:#0b0b0c;--black2:#111113;--gray:#1a1a1d;--line:#2c2c30;--white:#f7f6f3;--muted:#aaa8a3;--silver:#c9c8c5;--accent:#d7d5d0}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{background:var(--black);color:var(--white);font-family:"DM Sans",sans-serif;line-height:1.6}
-body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.025;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 120 120' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.35'/%3E%3C/svg%3E")}
-a{color:inherit;text-decoration:none}.wrap{width:min(1160px,92%);margin:auto}
-header{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(11,11,12,.78);backdrop-filter:blur(18px);border-bottom:1px solid #fff1}
-.nav{height:82px;display:flex;align-items:center;justify-content:space-between}
-.brand img{width:175px;height:auto;display:block;filter:brightness(1.55)}
-nav{display:flex;gap:30px;font-size:13px;color:#d8d6d2;letter-spacing:.2px}nav a{transition:.2s}nav a:hover{color:white}
-.nav-cta{padding:10px 16px;border:1px solid #666;border-radius:3px}.nav-cta:hover{background:white;color:#111}
-.menu{display:none;background:none;border:0;color:white;font-size:26px}
-.hero{min-height:100vh;padding:130px 0 70px;display:flex;align-items:center;position:relative;overflow:hidden;background:radial-gradient(circle at 82% 20%,#fff12,transparent 28%),linear-gradient(135deg,#09090a,#18181a 60%,#0b0b0c)}
-.hero:after{content:"";position:absolute;width:520px;height:520px;border:1px solid #ffffff0b;border-radius:50%;right:-170px;bottom:-190px;box-shadow:0 0 0 50px #ffffff04,0 0 0 100px #ffffff02}
-.hero-grid{display:grid;grid-template-columns:1.02fr .98fr;gap:70px;align-items:center;position:relative;z-index:2}
-.kicker{text-transform:uppercase;letter-spacing:4px;font-size:10px;color:#bbb9b4;margin-bottom:18px}
-h1,h2,h3{font-family:"Playfair Display",serif;font-weight:600}
-h1{font-size:clamp(50px,6.5vw,82px);line-height:.97;letter-spacing:-1.8px}
-.hero h1 em{font-style:normal;color:#cfcfc9}
-.lead{max-width:560px;color:#b4b2ae;font-size:16px;margin:25px 0 32px}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:14px 21px;border-radius:4px;border:1px solid white;background:white;color:#101010;font-weight:700;font-size:13px;cursor:pointer;transition:.22s}.btn:hover{transform:translateY(-2px);box-shadow:0 12px 35px #0008}
-.btn.dark{background:transparent;color:white;border-color:#555}.btn.dark:hover{border-color:white;background:#fff;color:#111}
-.hero-photo{height:570px;border-radius:8px;overflow:hidden;border:1px solid #fff2;box-shadow:0 35px 80px #000b;position:relative;background:#222}
-.hero-photo img{width:100%;height:100%;object-fit:cover;object-position:center;filter:saturate(.8) contrast(1.02)}
-.hero-photo:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,#000b)}
-.hero-label{position:absolute;z-index:2;bottom:24px;left:24px;right:24px;display:flex;justify-content:space-between;align-items:end}
-.hero-label strong{font:500 25px "Playfair Display"}.hero-label span{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#bbb}
-section{padding:105px 0}.eyebrow{text-transform:uppercase;letter-spacing:3px;color:#999;font-size:10px;margin-bottom:10px}.section-title{font-size:45px;line-height:1.08}.section-copy{color:var(--muted);max-width:650px;margin-top:12px}
-.intro{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:end}.intro-right{border-left:1px solid var(--line);padding-left:35px}
-.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:42px}
-.card{background:linear-gradient(145deg,#18181b,#101012);border:1px solid var(--line);padding:28px;border-radius:6px;min-height:190px;transition:.25s}.card:hover{transform:translateY(-5px);border-color:#686868}
-.number{font-size:11px;color:#888;letter-spacing:2px}.card h3{font-size:25px;margin:27px 0 7px}.card p{font-size:13px;color:#999}
-.gallery{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:42px}.gallery figure{height:470px;overflow:hidden;border-radius:7px;background:#181818;position:relative;border:1px solid var(--line)}.gallery img{width:100%;height:100%;object-fit:cover;transition:.5s}.gallery figure:hover img{transform:scale(1.035)}.gallery figcaption{position:absolute;bottom:0;left:0;right:0;padding:22px;background:linear-gradient(transparent,#000d);font-size:12px;color:#ddd}
-.about{display:grid;grid-template-columns:.9fr 1.1fr;gap:75px;align-items:center}.about-mark{min-height:440px;border:1px solid var(--line);border-radius:8px;display:grid;place-items:center;background:radial-gradient(circle,#222,transparent 55%),#111;position:relative;overflow:hidden}.about-mark img{width:75%;filter:brightness(1.45)}.about h2{font-size:46px}.about p{color:#aaa;margin:20px 0}.points{display:grid;grid-template-columns:1fr 1fr;gap:15px;margin-top:28px}.points div{border-top:1px solid var(--line);padding-top:12px;font-size:13px;color:#d1cfcb}
-.payments{background:#151517;border-block:1px solid var(--line)}.payment-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:35px}.payment{padding:25px;border:1px solid #303035;background:#101012;border-radius:5px}.payment b{display:block;font-size:15px;margin-bottom:4px}.payment span{font-size:12px;color:#92908b}
-.booking{background:linear-gradient(135deg,#151516,#0c0c0d)}.booking-box{display:grid;grid-template-columns:.8fr 1.2fr;gap:65px;align-items:start}.booking h2{font-size:47px}.booking-copy{color:#999;margin-top:15px}.form{background:#151517;border:1px solid #333;border-radius:7px;padding:27px;display:grid;gap:13px}.form label{font-size:11px;color:#aaa;text-transform:uppercase;letter-spacing:1.4px}.field{display:grid;gap:7px}.form input,.form select,.form textarea{width:100%;padding:13px 14px;background:#0c0c0d;border:1px solid #35353a;color:#fff;border-radius:4px;font:inherit;outline:none}.form input:focus,.form select:focus,.form textarea:focus{border-color:#aaa}.row{display:grid;grid-template-columns:1fr 1fr;gap:12px}.form textarea{min-height:95px;resize:vertical}.note{font-size:11px;color:#777}
-footer{border-top:1px solid var(--line);padding:28px 0;color:#777;font-size:12px}.footer-row{display:flex;justify-content:space-between;gap:20px}.whatsapp{position:fixed;right:20px;bottom:20px;z-index:40;width:57px;height:57px;border-radius:50%;background:#fff;color:#111;display:grid;place-items:center;font-weight:800;font-size:18px;box-shadow:0 12px 30px #0009;transition:.2s}.whatsapp:hover{transform:scale(1.07)}
-.modal{position:fixed;inset:0;background:#000d;z-index:100;display:none;place-items:center;padding:18px}.modal.open{display:grid}.modal-card{width:min(490px,100%);background:#151517;border:1px solid #444;border-radius:8px;padding:28px;position:relative}.close{position:absolute;right:15px;top:12px;background:none;border:0;color:#aaa;font-size:25px;cursor:pointer}.modal-card h3{font-size:29px;margin-bottom:4px}.modal-card p{font-size:12px;color:#999;margin-bottom:20px}
-.toast{position:fixed;left:50%;bottom:25px;transform:translate(-50%,30px);opacity:0;z-index:120;background:#fff;color:#111;padding:12px 17px;border-radius:4px;font-size:12px;transition:.3s;pointer-events:none}.toast.show{opacity:1;transform:translate(-50%,0)}
-@media(max-width:800px){nav{display:none}.menu{display:block}.nav.open nav{display:flex;position:absolute;top:82px;left:0;right:0;background:#111;padding:18px 4%;flex-direction:column;gap:17px;border-bottom:1px solid var(--line)}.nav-cta{display:none}.hero-grid,.intro,.about,.booking-box{grid-template-columns:1fr}.hero{padding-top:125px}.hero-photo{height:430px}.cards,.payment-grid{grid-template-columns:1fr}.gallery{grid-template-columns:1fr}.gallery figure{height:430px}.intro-right{border-left:0;border-top:1px solid var(--line);padding:25px 0 0}.about-mark{min-height:310px}.points{grid-template-columns:1fr}.section-title,.about h2,.booking h2{font-size:38px}.row{grid-template-columns:1fr}.footer-row{flex-direction:column}}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Estúdio de Beleza Liliane Feliciano</title>
+
+    <meta name="description" content="Estúdio de Beleza Liliane Feliciano — beleza, cuidado e transformação em um só lugar.">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #080808;
+            color: #f5f5f5;
+            line-height: 1.6;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(5, 5, 5, 0.94);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255,255,255,0.12);
+        }
+
+        .nav {
+            max-width: 1200px;
+            margin: auto;
+            padding: 14px 25px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            width: 95px;
+            height: 65px;
+            object-fit: contain;
+        }
+
+        .menu {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .menu a {
+            font-size: 14px;
+            color: #ddd;
+            transition: 0.3s;
+        }
+
+        .menu a:hover {
+            color: #fff;
+        }
+
+        .menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 28px;
+            cursor: pointer;
+        }
+
+        .hero {
+            min-height: 100vh;
+            padding: 140px 25px 80px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(0,0,0,0.98) 0%,
+                    rgba(0,0,0,0.82) 42%,
+                    rgba(0,0,0,0.35) 100%
+                ),
+                url("assets/trabalho-01.jpg") center/cover no-repeat;
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            width: 100%;
+            margin: auto;
+        }
+
+        .hero-text {
+            max-width: 650px;
+        }
+
+        .eyebrow {
+            color: #bdbdbd;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            font-size: 12px;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: clamp(42px, 7vw, 78px);
+            line-height: 1;
+            font-weight: 400;
+            margin-bottom: 25px;
+        }
+
+        .hero h1 span {
+            color: #bfbfbf;
+        }
+
+        .hero p {
+            max-width: 540px;
+            color: #d0d0d0;
+            font-size: 17px;
+            margin-bottom: 35px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 15px 25px;
+            border-radius: 2px;
+            font-size: 14px;
+            transition: 0.3s;
+            cursor: pointer;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: #fff;
+            color: #050505;
+        }
+
+        .btn-primary:hover {
+            background: #cfcfcf;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            border: 1px solid #777;
+            color: white;
+        }
+
+        .btn-outline:hover {
+            border-color: white;
+            background: rgba(255,255,255,0.08);
+        }
+
+        section {
+            padding: 100px 25px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .section-title {
+            margin-bottom: 50px;
+        }
+
+        .section-title small {
+            display: block;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: #999;
+            font-size: 11px;
+            margin-bottom: 10px;
+        }
+
+        .section-title h2 {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: clamp(35px, 5vw, 55px);
+            font-weight: 400;
+        }
+
+        .section-title p {
+            color: #999;
+            max-width: 600px;
+            margin-top: 15px;
+        }
+
+        .services {
+            background: #0d0d0d;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .service {
+            border: 1px solid #292929;
+            padding: 35px 28px;
+            background: #111;
+            transition: 0.3s;
+        }
+
+        .service:hover {
+            transform: translateY(-6px);
+            border-color: #666;
+        }
+
+        .service-number {
+            font-family: Georgia, serif;
+            color: #777;
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        .service h3 {
+            font-family: Georgia, serif;
+            font-size: 25px;
+            font-weight: 400;
+            margin-bottom: 15px;
+        }
+
+        .service p {
+            color: #999;
+            font-size: 14px;
+        }
+
+        .portfolio {
+            background: #080808;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            background: #111;
+            aspect-ratio: 4 / 5;
+        }
+
+        .gallery-item:first-child {
+            grid-row: span 2;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.06);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            inset: auto 0 0;
+            padding: 30px 20px 20px;
+            background: linear-gradient(transparent, rgba(0,0,0,0.9));
+            opacity: 0;
+            transition: 0.3s;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        .gallery-overlay span {
+            font-size: 12px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .about {
+            background: #101010;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .about-image {
+            overflow: hidden;
+        }
+
+        .about-image img {
+            width: 100%;
+            aspect-ratio: 4 / 5;
+            object-fit: cover;
+        }
+
+        .about-text h2 {
+            font-family: Georgia, serif;
+            font-size: clamp(38px, 5vw, 58px);
+            font-weight: 400;
+            margin-bottom: 25px;
+        }
+
+        .about-text p {
+            color: #aaa;
+            margin-bottom: 18px;
+        }
+
+        .signature {
+            margin-top: 30px;
+            font-family: Georgia, serif;
+            font-style: italic;
+            font-size: 24px;
+            color: #ddd;
+        }
+
+        .payment {
+            background: #080808;
+            text-align: center;
+        }
+
+        .payment-box {
+            max-width: 800px;
+            margin: auto;
+            border: 1px solid #292929;
+            padding: 50px 30px;
+        }
+
+        .payment-box h2 {
+            font-family: Georgia, serif;
+            font-size: 40px;
+            font-weight: 400;
+            margin-bottom: 15px;
+        }
+
+        .payment-box p {
+            color: #999;
+            margin-bottom: 30px;
+        }
+
+        .payment-methods {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .payment-method {
+            border: 1px solid #444;
+            padding: 12px 22px;
+            font-size: 13px;
+        }
+
+        .booking {
+            background: #111;
+        }
+
+        .booking-grid {
+            display: grid;
+            grid-template-columns: 0.8fr 1.2fr;
+            gap: 60px;
+            align-items: start;
+        }
+
+        .booking-info h2 {
+            font-family: Georgia, serif;
+            font-size: 48px;
+            font-weight: 400;
+            margin-bottom: 20px;
+        }
+
+        .booking-info p {
+            color: #999;
+            margin-bottom: 25px;
+        }
+
+        .booking-form {
+            display: grid;
+            gap: 15px;
+        }
+
+        .form-group {
+            display: grid;
+            gap: 7px;
+        }
+
+        .form-group label {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #aaa;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            background: #080808;
+            border: 1px solid #333;
+            color: white;
+            padding: 15px;
+            outline: none;
+            font-family: inherit;
+            font-size: 14px;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            border-color: #888;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 110px;
+        }
+
+        select option {
+            background: #111;
+        }
+
+        .form-button {
+            border: none;
+            margin-top: 5px;
+            width: 100%;
+            padding: 16px;
+            background: white;
+            color: black;
+            cursor: pointer;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        .form-button:hover {
+            background: #ccc;
+        }
+
+        .contact {
+            padding: 80px 25px;
+            background: #050505;
+            text-align: center;
+        }
+
+        .contact h2 {
+            font-family: Georgia, serif;
+            font-size: 45px;
+            font-weight: 400;
+            margin-bottom: 15px;
+        }
+
+        .contact p {
+            color: #999;
+            margin-bottom: 30px;
+        }
+
+        footer {
+            border-top: 1px solid #222;
+            background: #050505;
+            padding: 35px 25px;
+            text-align: center;
+        }
+
+        footer img {
+            width: 80px;
+            margin: 0 auto 15px;
+        }
+
+        footer p {
+            color: #666;
+            font-size: 12px;
+        }
+
+        .whatsapp {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            z-index: 999;
+            width: 58px;
+            height: 58px;
+            border-radius: 50%;
+            background: #fff;
+            color: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 25px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.5);
+            transition: 0.3s;
+        }
+
+        .whatsapp:hover {
+            transform: scale(1.08);
+        }
+
+        @media (max-width: 800px) {
+
+            .menu-btn {
+                display: block;
+            }
+
+            .menu {
+                display: none;
+                position: absolute;
+                top: 93px;
+                left: 0;
+                width: 100%;
+                background: #090909;
+                border-bottom: 1px solid #222;
+                padding: 20px;
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .menu.active {
+                display: flex;
+            }
+
+            .service-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-item:first-child {
+                grid-row: auto;
+            }
+
+            .gallery-item {
+                aspect-ratio: 4 / 5;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .booking-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .hero {
+                background-position: 65% center;
+            }
+
+            section {
+                padding: 75px 20px;
+            }
+        }
+
+        @media (max-width: 450px) {
+
+            .nav {
+                padding: 12px 18px;
+            }
+
+            .logo {
+                width: 82px;
+            }
+
+            .hero {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+
+            .hero p {
+                font-size: 15px;
+            }
+
+            .buttons {
+                flex-direction: column;
+            }
+
+            .btn {
+                text-align: center;
+                width: 100%;
+            }
+
+            .payment-box {
+                padding: 35px 20px;
+            }
+        }
+    </style>
 </head>
+
 <body>
+
 <header>
-  <div class="wrap nav" id="navWrap">
-    <a class="brand" href="#inicio"><img src="assets/logo-transparente.png" alt="Liliane Feliciano — Estúdio de Beleza"></a>
-    <nav>
-      <a href="#inicio">Início</a><a href="#servicos">Serviços</a><a href="#trabalhos">Trabalhos</a><a href="#sobre">O Estúdio</a><a href="#agendar" class="nav-cta">Agendar</a>
+    <nav class="nav">
+
+        <a href="#inicio">
+            <img
+                class="logo"
+                src="assets/logo-transparente.png"
+                alt="Estúdio de Beleza Liliane Feliciano"
+            >
+        </a>
+
+        <button class="menu-btn" onclick="toggleMenu()">
+            ☰
+        </button>
+
+        <div class="menu" id="menu">
+            <a href="#inicio" onclick="closeMenu()">Início</a>
+            <a href="#servicos" onclick="closeMenu()">Serviços</a>
+            <a href="#portfolio" onclick="closeMenu()">Trabalhos</a>
+            <a href="#sobre" onclick="closeMenu()">Sobre</a>
+            <a href="#agendamento" onclick="closeMenu()">Agendamento</a>
+        </div>
+
     </nav>
-    <button class="menu" onclick="document.getElementById('navWrap').classList.toggle('open')">☰</button>
-  </div>
 </header>
 
+
 <main>
-<section class="hero" id="inicio">
-  <div class="wrap hero-grid">
-    <div>
-      <div class="kicker">Estúdio de Beleza • Liliane Feliciano</div>
-      <h1>Beleza que <em>fala por você.</em></h1>
-      <p class="lead">Um atendimento pensado para valorizar sua beleza, com cuidado em cada detalhe e uma experiência sofisticada do início ao fim.</p>
-      <a class="btn" href="#agendar">Agendar meu horário →</a>
-      <a class="btn dark" href="#trabalhos">Ver trabalhos</a>
-    </div>
-    <div class="hero-photo">
-      <img src="assets/trabalho-01.jpg" alt="Trabalho de cabelo realizado no Estúdio Liliane Feliciano">
-      <div class="hero-label"><strong>Seu momento.</strong><span>Seu estilo.</span></div>
-    </div>
-  </div>
-</section>
 
-<section id="servicos">
-<div class="wrap">
-  <div class="intro">
-    <div><div class="eyebrow">Atendimento</div><h2 class="section-title">Serviços pensados para você.</h2></div>
-    <div class="intro-right"><p class="section-copy">Escolha o serviço desejado no formulário de agendamento. Caso não encontre exatamente o que procura, selecione “Outro” e descreva o que deseja.</p></div>
-  </div>
-  <div class="cards">
-    <article class="card"><span class="number">01 / CABELOS</span><h3>Transformação</h3><p>Cortes, finalizações e produções para renovar o visual e valorizar seu estilo.</p></article>
-    <article class="card"><span class="number">02 / COR & LUZES</span><h3>Cor e iluminação</h3><p>Serviços de cor, mechas e técnicas de iluminação conforme o resultado desejado.</p></article>
-    <article class="card"><span class="number">03 / CUIDADOS</span><h3>Tratamentos</h3><p>Cuidados para deixar os cabelos bonitos, bem tratados e com acabamento impecável.</p></article>
-  </div>
-</div>
-</section>
+    <section class="hero" id="inicio">
 
-<section id="trabalhos">
-<div class="wrap">
-  <div class="eyebrow">Portfólio</div><h2 class="section-title">Alguns trabalhos.</h2>
-  <p class="section-copy">Resultados reais para você conhecer o estilo do estúdio.</p>
-  <div class="gallery">
-    <figure><img src="assets/trabalho-01.jpg" alt="Trabalho de cabelo — Estúdio Liliane Feliciano"><figcaption>Produção e finalização</figcaption></figure>
-    <figure><img src="assets/trabalho-02.jpg" alt="Trabalho de cabelo — Estúdio Liliane Feliciano"><figcaption>Coloração e ondas</figcaption></figure>
-  </div>
-</div>
-</section>
+        <div class="hero-content">
 
-<section id="sobre">
-<div class="wrap about">
-  <div class="about-mark"><img src="assets/logo-transparente.png" alt="Logo Liliane Feliciano"></div>
-  <div><div class="eyebrow">O estúdio</div><h2>Elegância nos detalhes. Cuidado em cada atendimento.</h2>
-  <p>O Estúdio de Beleza Liliane Feliciano foi pensado para oferecer um ambiente bonito, acolhedor e profissional, onde cada cliente possa reservar um tempo para si.</p>
-  <p>Do primeiro contato ao resultado final, a proposta é unir técnica, atenção e uma experiência que faça você querer voltar.</p>
-  <div class="points"><div>Atendimento personalizado</div><div>Ambiente sofisticado</div><div>Cuidado em cada detalhe</div><div>Experiência de beleza</div></div></div>
-</div>
-</section>
+            <div class="hero-text">
 
-<section class="payments">
-<div class="wrap">
-  <div class="eyebrow">Facilidade</div><h2 class="section-title">Formas de pagamento</h2>
-  <div class="payment-grid">
-    <div class="payment"><b>PIX</b><span>Pagamento rápido e prático.</span></div>
-    <div class="payment"><b>Cartão</b><span>Aceitamos pagamento no cartão.</span></div>
-    <div class="payment"><b>Espécie</b><span>Pagamento em dinheiro.</span></div>
-  </div>
-</div>
-</section>
+                <div class="eyebrow">
+                    Estúdio de Beleza
+                </div>
 
-<section class="booking" id="agendar">
-<div class="wrap booking-box">
-  <div><div class="eyebrow">Agendamento</div><h2>Reserve seu momento.</h2><p class="booking-copy">Preencha seus dados. Ao enviar, o WhatsApp abrirá uma mensagem já organizada com nome, serviço, data, horário e observações para facilitar o atendimento.</p></div>
-  <form class="form" onsubmit="agendar(event)">
-    <div class="field"><label>Nome completo</label><input id="nome" required placeholder="Como podemos te chamar?"></div>
-    <div class="field"><label>WhatsApp</label><input id="telefone" required placeholder="(84) 99999-9999" inputmode="tel"></div>
-    <div class="field"><label>Serviço</label><select id="servico" required>
-      <option value="">Selecione...</option><option>Corte</option><option>Escova / Finalização</option><option>Coloração</option><option>Mechas / Iluminação</option><option>Tratamento</option><option>Penteado</option><option>Outro</option>
-    </select></div>
-    <div class="row">
-      <div class="field"><label>Data desejada</label><input id="data" type="date" required></div>
-      <div class="field"><label>Horário desejado</label><input id="hora" type="time" required></div>
-    </div>
-    <div class="field"><label>Observações</label><textarea id="obs" placeholder="Ex.: comprimento do cabelo, serviço desejado, alguma preferência..."></textarea></div>
-    <button class="btn" type="submit">Enviar solicitação pelo WhatsApp →</button>
-    <div class="note">O envio é uma solicitação de horário. A confirmação depende da disponibilidade do estúdio.</div>
-  </form>
-</div>
-</section>
+                <h1>
+                    Sua beleza.<br>
+                    <span>Seu momento.</span>
+                </h1>
+
+                <p>
+                    Cuidado, sofisticação e transformação em um ambiente
+                    pensado para você se sentir ainda mais especial.
+                </p>
+
+                <div class="buttons">
+
+                    <a
+                        href="#agendamento"
+                        class="btn btn-primary"
+                    >
+                        Agendar horário
+                    </a>
+
+                    <a
+                        href="#portfolio"
+                        class="btn btn-outline"
+                    >
+                        Ver trabalhos
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="services" id="servicos">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <small>
+                    O que fazemos
+                </small>
+
+                <h2>
+                    Beleza em cada detalhe.
+                </h2>
+
+                <p>
+                    Serviços realizados com atenção aos detalhes,
+                    cuidado e dedicação para valorizar a sua beleza.
+                </p>
+
+            </div>
+
+
+            <div class="service-grid">
+
+                <article class="service">
+
+                    <div class="service-number">
+                        01
+                    </div>
+
+                    <h3>
+                        Transformação
+                    </h3>
+
+                    <p>
+                        Cortes, escovas e produções pensadas para
+                        renovar o visual e valorizar seus traços.
+                    </p>
+
+                </article>
+
+
+                <article class="service">
+
+                    <div class="service-number">
+                        02
+                    </div>
+
+                    <h3>
+                        Cor & Iluminação
+                    </h3>
+
+                    <p>
+                        Técnicas de coloração e iluminação para criar
+                        um resultado sofisticado e personalizado.
+                    </p>
+
+                </article>
+
+
+                <article class="service">
+
+                    <div class="service-number">
+                        03
+                    </div>
+
+                    <h3>
+                        Tratamentos
+                    </h3>
+
+                    <p>
+                        Cuidados para manter os cabelos bonitos,
+                        hidratados, saudáveis e bem cuidados.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="portfolio" id="portfolio">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <small>
+                    Portfólio
+                </small>
+
+                <h2>
+                    Alguns dos nossos trabalhos.
+                </h2>
+
+                <p>
+                    Cada resultado é único. Confira alguns trabalhos
+                    realizados no Estúdio de Beleza Liliane Feliciano.
+                </p>
+
+            </div>
+
+
+            <div class="gallery">
+
+                <div class="gallery-item">
+
+                    <img
+                        src="assets/trabalho-01.jpg"
+                        alt="Trabalho realizado no Estúdio de Beleza Liliane Feliciano"
+                        loading="lazy"
+                    >
+
+                    <div class="gallery-overlay">
+                        <span>
+                            Estúdio Liliane Feliciano
+                        </span>
+                    </div>
+
+                </div>
+
+
+                <div class="gallery-item">
+
+                    <img
+                        src="assets/trabalho-02.jpg"
+                        alt="Trabalho realizado no Estúdio de Beleza Liliane Feliciano"
+                        loading="lazy"
+                    >
+
+                    <div class="gallery-overlay">
+                        <span>
+                            Estúdio Liliane Feliciano
+                        </span>
+                    </div>
+
+                </div>
+
+
+                <div class="gallery-item">
+
+                    <img
+                        src="assets/trabalho-03.jpg"
+                        alt="Trabalho realizado no Estúdio de Beleza Liliane Feliciano"
+                        loading="lazy"
+                    >
+
+                    <div class="gallery-overlay">
+                        <span>
+                            Estúdio Liliane Feliciano
+                        </span>
+                    </div>
+
+                </div>
+
+
+                <div class="gallery-item">
+
+                    <img
+                        src="assets/trabalho-04.jpg"
+                        alt="Trabalho realizado no Estúdio de Beleza Liliane Feliciano"
+                        loading="lazy"
+                    >
+
+                    <div class="gallery-overlay">
+                        <span>
+                            Estúdio Liliane Feliciano
+                        </span>
+                    </div>
+
+                </div>
+
+
+                <div class="gallery-item">
+
+                    <img
+                        src="assets/trabalho-05.jpg"
+                        alt="Trabalho realizado no Estúdio de Beleza Liliane Feliciano"
+                        loading="lazy"
+                    >
+
+                    <div class="gallery-overlay">
+                        <span>
+                            Estúdio Liliane Feliciano
+                        </span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="about" id="sobre">
+
+        <div class="container">
+
+            <div class="about-grid">
+
+                <div class="about-image">
+
+                    <img
+                        src="assets/trabalho-02.jpg"
+                        alt="Trabalho do Estúdio de Beleza Liliane Feliciano"
+                        loading="lazy"
+                    >
+
+                </div>
+
+
+                <div class="about-text">
+
+                    <div class="section-title">
+
+                        <small>
+                            Sobre o estúdio
+                        </small>
+
+                    </div>
+
+                    <h2>
+                        Beleza feita com cuidado.
+                    </h2>
+
+                    <p>
+                        O Estúdio de Beleza Liliane Feliciano nasceu
+                        para oferecer um atendimento personalizado,
+                        acolhedor e dedicado a cada cliente.
+                    </p>
+
+                    <p>
+                        Mais do que transformar o visual, nosso objetivo
+                        é proporcionar uma experiência especial,
+                        respeitando o estilo e a personalidade de cada pessoa.
+                    </p>
+
+                    <div class="signature">
+                        Liliane Feliciano
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="payment">
+
+        <div class="container">
+
+            <div class="payment-box">
+
+                <h2>
+                    Formas de pagamento
+                </h2>
+
+                <p>
+                    Escolha a forma de pagamento que for mais conveniente
+                    para você.
+                </p>
+
+                <div class="payment-methods">
+
+                    <div class="payment-method">
+                        PIX
+                    </div>
+
+                    <div class="payment-method">
+                        Cartão
+                    </div>
+
+                    <div class="payment-method">
+                        Espécie
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="booking" id="agendamento">
+
+        <div class="container">
+
+            <div class="booking-grid">
+
+                <div class="booking-info">
+
+                    <div class="section-title">
+
+                        <small>
+                            Agendamento
+                        </small>
+
+                    </div>
+
+                    <h2>
+                        Reserve seu momento.
+                    </h2>
+
+                    <p>
+                        Preencha os dados ao lado. Ao enviar,
+                        uma mensagem será preparada para o WhatsApp
+                        do estúdio para solicitar o seu horário.
+                    </p>
+
+                    <p>
+                        O horário será confirmado após a verificação
+                        da disponibilidade.
+                    </p>
+
+                </div>
+
+
+                <form
+                    class="booking-form"
+                    id="bookingForm"
+                >
+
+                    <div class="form-group">
+
+                        <label for="nome">
+                            Nome completo
+                        </label>
+
+                        <input
+                            type="text"
+                            id="nome"
+                            name="nome"
+                            placeholder="Digite seu nome"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="clienteWhatsapp">
+                            Seu WhatsApp
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="clienteWhatsapp"
+                            name="clienteWhatsapp"
+                            placeholder="(84) 99999-9999"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="servico">
+                            Serviço
+                        </label>
+
+                        <select
+                            id="servico"
+                            name="servico"
+                            required
+                        >
+
+                            <option value="">
+                                Selecione um serviço
+                            </option>
+
+                            <option value="Corte">
+                                Corte
+                            </option>
+
+                            <option value="Escova">
+                                Escova
+                            </option>
+
+                            <option value="Coloração">
+                                Coloração
+                            </option>
+
+                            <option value="Iluminação">
+                                Iluminação
+                            </option>
+
+                            <option value="Tratamento">
+                                Tratamento
+                            </option>
+
+                            <option value="Outro">
+                                Outro
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="data">
+                            Data desejada
+                        </label>
+
+                        <input
+                            type="date"
+                            id="data"
+                            name="data"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="horario">
+                            Horário desejado
+                        </label>
+
+                        <input
+                            type="time"
+                            id="horario"
+                            name="horario"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="observacoes">
+                            Observações
+                        </label>
+
+                        <textarea
+                            id="observacoes"
+                            name="observacoes"
+                            placeholder="Alguma informação importante?"
+                        ></textarea>
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="form-button"
+                    >
+                        Solicitar agendamento pelo WhatsApp
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="contact">
+
+        <div class="container">
+
+            <h2>
+                Vamos cuidar de você?
+            </h2>
+
+            <p>
+                Entre em contato e consulte nossos horários disponíveis.
+            </p>
+
+            <a
+                href="#agendamento"
+                class="btn btn-primary"
+            >
+                Agendar agora
+            </a>
+
+        </div>
+
+    </section>
+
 </main>
 
-<footer><div class="wrap footer-row"><span>© 2026 Liliane Feliciano — Estúdio de Beleza</span><span>Beleza • Cuidado • Elegância</span></div></footer>
-<a class="whatsapp" href="#" onclick="abrirWhats(event)" aria-label="Falar no WhatsApp">WA</a>
-<div class="toast" id="toast"></div>
+
+<footer>
+
+    <img
+        src="assets/logo-transparente.png"
+        alt="Estúdio de Beleza Liliane Feliciano"
+    >
+
+    <p>
+        © <span id="ano"></span> Estúdio de Beleza Liliane Feliciano.
+        Todos os direitos reservados.
+    </p>
+
+</footer>
+
+
+<a
+    class="whatsapp"
+    id="whatsappButton"
+    href="#"
+    aria-label="Falar pelo WhatsApp"
+>
+    ☎
+</a>
+
 
 <script>
-// IMPORTANTE: substitua somente o número abaixo pelo WhatsApp real do salão.
-// Formato: 55 + DDD + número, sem espaços, parênteses ou símbolos.
-const WHATSAPP = "5584999999999";
 
-function abrirWhats(e){
-  e.preventDefault();
-  if(WHATSAPP==="5584999999999"){aviso("Coloque o WhatsApp real do salão no código.");return}
-  window.open("https://wa.me/"+WHATSAPP+"?text="+encodeURIComponent("Olá, Liliane! Gostaria de informações sobre os serviços e horários disponíveis."),"_blank");
-}
-function agendar(e){
-  e.preventDefault();
-  if(WHATSAPP==="5584999999999"){aviso("Antes de publicar, coloque o WhatsApp real do salão no código.");return}
-  const nome=document.getElementById("nome").value.trim();
-  const tel=document.getElementById("telefone").value.trim();
-  const serv=document.getElementById("servico").value;
-  const data=document.getElementById("data").value;
-  const hora=document.getElementById("hora").value;
-  const obs=document.getElementById("obs").value.trim();
-  const [y,m,d]=data.split("-");
-  const dataBR=`${d}/${m}/${y}`;
-  let msg=`Olá, Liliane! ✨%0A%0AGostaria de solicitar um agendamento.%0A%0A👤 *Nome:* ${nome}%0A📱 *WhatsApp:* ${tel}%0A💇 *Serviço:* ${serv}%0A📅 *Data:* ${dataBR}%0A🕐 *Horário:* ${hora}`;
-  if(obs) msg+=`%0A📝 *Observações:* ${obs}`;
-  msg+=`%0A%0A*Aguardo a confirmação da disponibilidade. Obrigada!*`;
-  window.open("https://wa.me/"+WHATSAPP+"?text="+msg,"_blank");
-}
-function aviso(t){
-  const el=document.getElementById("toast");el.textContent=t;el.classList.add("show");setTimeout(()=>el.classList.remove("show"),3200);
-}
-document.getElementById("data").min=new Date().toISOString().split("T")[0];
+    /* NÚMERO DO WHATSAPP DO ESTÚDIO */
+
+    const WHATSAPP = "558487879792";
+
+
+    /* MENU MOBILE */
+
+    function toggleMenu() {
+
+        const menu = document.getElementById("menu");
+
+        menu.classList.toggle("active");
+
+    }
+
+
+    function closeMenu() {
+
+        const menu = document.getElementById("menu");
+
+        menu.classList.remove("active");
+
+    }
+
+
+    /* BOTÃO FLUTUANTE DO WHATSAPP */
+
+    const whatsappButton =
+        document.getElementById("whatsappButton");
+
+    whatsappButton.addEventListener("click", function(event) {
+
+        event.preventDefault();
+
+        const mensagem =
+            "Olá! Gostaria de conhecer os serviços e consultar os horários disponíveis do Estúdio de Beleza Liliane Feliciano.";
+
+        const url =
+            "https://wa.me/" +
+            WHATSAPP +
+            "?text=" +
+            encodeURIComponent(mensagem);
+
+        window.open(url, "_blank");
+
+    });
+
+
+    /* FORMULÁRIO DE AGENDAMENTO */
+
+    document
+        .getElementById("bookingForm")
+        .addEventListener("submit", function(event) {
+
+            event.preventDefault();
+
+            const nome =
+                document.getElementById("nome").value.trim();
+
+            const clienteWhatsapp =
+                document
+                    .getElementById("clienteWhatsapp")
+                    .value.trim();
+
+            const servico =
+                document.getElementById("servico").value;
+
+            const data =
+                document.getElementById("data").value;
+
+            const horario =
+                document.getElementById("horario").value;
+
+            const observacoes =
+                document
+                    .getElementById("observacoes")
+                    .value.trim();
+
+
+            let dataFormatada = data;
+
+            if (data) {
+
+                const partes = data.split("-");
+
+                if (partes.length === 3) {
+
+                    dataFormatada =
+                        partes[2] +
+                        "/" +
+                        partes[1] +
+                        "/" +
+                        partes[0];
+
+                }
+
+            }
+
+
+            let mensagem =
+                "Olá! Gostaria de solicitar um agendamento no Estúdio de Beleza Liliane Feliciano.%0A%0A" +
+
+                "*Nome:* " +
+                nome +
+                "%0A" +
+
+                "*Meu WhatsApp:* " +
+                clienteWhatsapp +
+                "%0A" +
+
+                "*Serviço:* " +
+                servico +
+                "%0A" +
+
+                "*Data desejada:* " +
+                dataFormatada +
+                "%0A" +
+
+                "*Horário desejado:* " +
+                horario;
+
+
+            if (observacoes) {
+
+                mensagem +=
+                    "%0A%0A*Observações:* " +
+                    observacoes;
+
+            }
+
+
+            mensagem +=
+                "%0A%0APoderiam verificar a disponibilidade e confirmar o horário, por favor?";
+
+
+            const url =
+                "https://wa.me/" +
+                WHATSAPP +
+                "?text=" +
+                mensagem;
+
+
+            window.open(url, "_blank");
+
+        });
+
+
+    /* ANO AUTOMÁTICO */
+
+    document.getElementById("ano").textContent =
+        new Date().getFullYear();
+
+
+    /* IMPEDE ESCOLHER DATA PASSADA */
+
+    const campoData =
+        document.getElementById("data");
+
+    const hoje =
+        new Date();
+
+    const ano =
+        hoje.getFullYear();
+
+    const mes =
+        String(hoje.getMonth() + 1).padStart(2, "0");
+
+    const dia =
+        String(hoje.getDate()).padStart(2, "0");
+
+    campoData.min =
+        `${ano}-${mes}-${dia}`;
+
 </script>
+
 </body>
 </html>
